@@ -1,0 +1,49 @@
+2021-04-04 20:56:27,908 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.1.6.Final
+2021-04-04 20:56:28,210 [restartedMain] INFO  [com.lottery.trinity.TrinityApplication] StartupInfoLogger.java:55 - Starting TrinityApplication on panqingdeMacBook-Pro.local with PID 39736 (/Users/panqing/Downloads/trinity-combination/target/classes started by panqing in /Users/panqing/Downloads/trinity-combination)
+2021-04-04 20:56:28,244 [restartedMain] DEBUG [com.lottery.trinity.TrinityApplication] StartupInfoLogger.java:56 - Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2021-04-04 20:56:28,244 [restartedMain] INFO  [com.lottery.trinity.TrinityApplication] SpringApplication.java:655 - The following profiles are active: dev
+2021-04-04 20:56:28,573 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:225 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-04 20:56:28,574 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:225 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-04 20:56:37,312 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2021-04-04 20:56:37,335 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2021-04-04 20:56:37,337 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-04-04 20:56:37,337 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-04-04 20:56:37,544 [restartedMain] INFO  [o.a.c.c.C.[.[localhost].[/trinity-combination]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-04-04 20:56:37,545 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 8968 ms
+2021-04-04 20:56:38,023 [restartedMain] WARN  [c.b.m.e.spring.MybatisSqlSessionFactoryBean] Logger.java:44 - Can't find class in '[com.lottery.trinity.model.*.entity.enums]' package. Please check your configuration.
+2021-04-04 20:56:38,453 [restartedMain] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMethodMapping.java:284 - 
+	c.l.t.w.c.TrinityCombinationController:
+	{POST /trinity/generate}: generate(Long[],int)
+	{GET /trinity/selectByPrimaryKey}: testname(Long)
+	{GET /trinity/selectRankingList}: selectRankingList(int,int,String)
+2021-04-04 20:56:38,461 [restartedMain] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMethodMapping.java:284 - 
+	s.d.s.w.ApiResourceController:
+	{ /swagger-resources/configuration/security}: securityConfiguration()
+	{ /swagger-resources/configuration/ui}: uiConfiguration()
+	{ /swagger-resources}: swaggerResources()
+2021-04-04 20:56:38,474 [restartedMain] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMethodMapping.java:284 - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ /error}: error(HttpServletRequest)
+	{ /error, produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2021-04-04 20:56:38,487 [restartedMain] DEBUG [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMethodMapping.java:351 - 8 mappings in 'requestMappingHandlerMapping'
+2021-04-04 20:56:38,545 [restartedMain] INFO  [s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping] WebMvcPropertySourcedRequestMappingHandlerMapping.java:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2021-04-04 20:56:38,653 [restartedMain] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-04 20:56:38,714 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:58 - LiveReload server is running on port 35729
+2021-04-04 20:56:38,878 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8080"]
+2021-04-04 20:56:38,905 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8080 (http) with context path '/trinity-combination'
+2021-04-04 20:56:38,906 [restartedMain] INFO  [s.d.s.web.plugins.DocumentationPluginsBootstrapper] DocumentationPluginsBootstrapper.java:93 - Documentation plugins bootstrapped
+2021-04-04 20:56:38,910 [restartedMain] INFO  [s.d.s.web.plugins.DocumentationPluginsBootstrapper] AbstractDocumentationPluginsBootstrapper.java:79 - Found 1 custom documentation plugin(s)
+2021-04-04 20:56:38,947 [restartedMain] INFO  [s.d.spring.web.scanners.ApiListingReferenceScanner] ApiListingReferenceScanner.java:44 - Scanning for api listing references
+2021-04-04 20:56:39,104 [restartedMain] INFO  [com.lottery.trinity.TrinityApplication] StartupInfoLogger.java:61 - Started TrinityApplication in 14.817 seconds (JVM running for 21.418)
+2021-04-04 20:58:56,820 [http-nio-8080-exec-1] INFO  [o.a.c.c.C.[.[localhost].[/trinity-combination]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-04 20:58:56,823 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2021-04-04 20:58:56,878 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 53 ms
+2021-04-04 20:59:00,236 [http-nio-8080-exec-9] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMapping.java:412 - Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+2021-04-04 20:59:00,238 [http-nio-8080-exec-8] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMapping.java:412 - Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+2021-04-04 20:59:00,243 [http-nio-8080-exec-7] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMethodMapping.java:403 - 2 matching mappings: [{ /error}, { /error, produces [text/html]}]
+2021-04-04 20:59:00,244 [http-nio-8080-exec-7] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMapping.java:412 - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2021-04-04 20:59:00,356 [http-nio-8080-exec-2] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMapping.java:412 - Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+2021-04-04 20:59:00,370 [http-nio-8080-exec-3] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMapping.java:412 - Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+2021-04-04 20:59:00,525 [http-nio-8080-exec-10] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMethodMapping.java:403 - 2 matching mappings: [{ /error}, { /error, produces [text/html]}]
+2021-04-04 20:59:00,526 [http-nio-8080-exec-10] TRACE [o.s.w.s.m.m.a.RequestMappingHandlerMapping] AbstractHandlerMapping.java:412 - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2021-04-04 20:59:56,927 [SpringContextShutdownHook] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'

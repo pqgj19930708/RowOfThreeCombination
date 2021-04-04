@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: trinity-combination
+  profiles:
+    active: dev
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+
+
+server:
+  port: 8080
+  servlet:
+    context-path: /trinity-combination
+
+# 日志级别
+logging:
+  level:
+    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: trace
+    com.lottery.trinity: debug
+
+mybatis-plus:
+  type-aliases-package: com.lottery.trinity.model.*.entity
+  type-enums-package: com.lottery.trinity.model.*.entity.enums
+  mapper-locations: classpath*:mybatis/mapper/**/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  global-config:
+    # 数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: AUTO
+  # 原生配置
+  configuration:
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+

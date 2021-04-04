@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lottery.trinity.mapper.CombinationRecordMapper">
+  <resultMap id="BaseResultMap" type="com.lottery.trinity.model.entity.CombinationRecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="c_id" jdbcType="BIGINT" property="cId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="sequence" jdbcType="BIGINT" property="sequence" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, c_id, create_time, sequence
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_combination_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_combination_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.lottery.trinity.model.entity.CombinationRecord">
+    insert into t_combination_record (id, c_id, create_time, 
+      sequence)
+    values (#{id,jdbcType=BIGINT}, #{cId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{sequence,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.lottery.trinity.model.entity.CombinationRecord">
+    insert into t_combination_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="cId != null">
+        c_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="sequence != null">
+        sequence,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="cId != null">
+        #{cId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sequence != null">
+        #{sequence,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.lottery.trinity.model.entity.CombinationRecord">
+    update t_combination_record
+    <set>
+      <if test="cId != null">
+        c_id = #{cId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sequence != null">
+        sequence = #{sequence,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.lottery.trinity.model.entity.CombinationRecord">
+    update t_combination_record
+    set c_id = #{cId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      sequence = #{sequence,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="selectByCid" parameterType="java.lang.Long" resultType="java.lang.Long">
+    select 
+     count(*)
+    from t_combination_record
+    where c_id = #{cId,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectRankingList" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+	select
+		a.count,
+		b.combination
+	from
+		(
+			select c_id, count(*) count from t_combination_record group by c_id 
+		) a
+	left join t_combination b on b.id = a.c_id
+	order by a.count 
+      <if test="orderType == 0">
+        asc
+      </if>
+      <if test="orderType == 1">
+        desc
+      </if>
+      limit #{offsetStart}, #{offsetend}
+  </select>
+
+</mapper>
